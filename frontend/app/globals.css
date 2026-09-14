@@ -1,0 +1,343 @@
+@import "tailwindcss";
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #023020;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Prevent accidental horizontal scrolling */
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   ANIMATED BACKGROUND
+======================================== */
+
+.animated-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 9999px;
+
+  background: rgba(20, 100, 70, 0.25);
+
+  filter: blur(100px);
+
+  animation: floatGlow 12s ease-in-out infinite alternate;
+}
+
+/* First glow */
+.glow-one {
+  top: -120px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+/* Second glow */
+.glow-two {
+  top: 35%;
+  right: 10%;
+  animation-delay: -4s;
+}
+
+/* Third glow */
+.glow-three {
+  bottom: -150px;
+  left: 30%;
+  animation-delay: -8s;
+}
+
+/* Glow animation */
+@keyframes floatGlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(80px, -40px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-50px, 60px) scale(0.95);
+  }
+}
+
+/* ========================================
+   PAGE CONTAINER
+======================================== */
+
+.page-container {
+  scrollbar-width: none;
+}
+
+.page-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   PAGE SLIDER
+======================================== */
+
+.page-slider-wrapper {
+  position: relative;
+
+  width: 40px;
+  height: 240px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slider itself */
+.page-slider {
+  position: absolute;
+
+  width: 240px;
+  height: 4px;
+
+  transform: rotate(-90deg);
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 9999px;
+
+  cursor: pointer;
+}
+
+/* ========================================
+   CHROME / EDGE / SAFARI SLIDER
+======================================== */
+
+.page-slider::-webkit-slider-runnable-track {
+  height: 4px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 9999px;
+}
+
+.page-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 14px;
+  height: 14px;
+
+  margin-top: -5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+
+  cursor: grab;
+
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.page-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+}
+
+.page-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+
+  transform: scale(1.35);
+}
+
+/* ========================================
+   FIREFOX SLIDER
+======================================== */
+
+.page-slider::-moz-range-track {
+  height: 4px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 9999px;
+}
+
+.page-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+
+  cursor: grab;
+
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.page-slider::-moz-range-thumb:hover {
+  transform: scale(1.25);
+
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   PAGE SLIDER NUMBERS
+======================================== */
+
+.page-slider-labels {
+  position: absolute;
+
+  left: -18px;
+  top: 0;
+
+  height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  pointer-events: none;
+}
+
+.page-slider-labels span {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Active page number */
+.page-slider-labels span.active {
+  color: white;
+
+  font-weight: 600;
+
+  transform: scale(1.15);
+}
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+======================================== */
+
+@media (max-width: 767px) {
+  /* -------------------------------
+     Slider
+  -------------------------------- */
+
+  .page-slider-wrapper {
+    width: 30px;
+    height: 180px;
+  }
+
+  .page-slider {
+    width: 180px;
+  }
+
+  .page-slider-labels {
+    height: 180px;
+
+    left: -14px;
+
+    font-size: 8px;
+  }
+
+  /* -------------------------------
+     Page container
+  -------------------------------- */
+
+  .page-container {
+    padding-bottom: 4rem;
+  }
+
+  /* -------------------------------
+     Background glows
+  -------------------------------- */
+
+  .animated-glow {
+    width: 280px;
+    height: 280px;
+
+    filter: blur(80px);
+  }
+
+  .glow-one {
+    top: -80px;
+    left: -80px;
+  }
+
+  .glow-two {
+    top: 35%;
+    right: -100px;
+  }
+
+  .glow-three {
+    bottom: -100px;
+    left: 20%;
+  }
+}
+
+/* ========================================
+   VERY SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 400px) {
+  .page-slider-wrapper {
+    height: 150px;
+  }
+
+  .page-slider {
+    width: 150px;
+  }
+
+  .page-slider-labels {
+    height: 150px;
+
+    font-size: 7px;
+  }
+}
+
+/* ========================================
+   REDUCE MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animated-glow {
+    animation: none;
+  }
+
+  .page-slider::-webkit-slider-thumb {
+    transition: none;
+  }
+
+  .page-slider-labels span {
+    transition: none;
+  }
+}
