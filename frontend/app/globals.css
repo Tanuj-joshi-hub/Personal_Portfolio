@@ -348,3 +348,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Mobile bottom navigation */
+@media (max-width: 767px) {
+  .navbar-texture {
+    background-color: #6B3515;
+    background-image: url("/Brown-Texture.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
