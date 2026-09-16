@@ -52,7 +52,7 @@ export default function PageSlider() {
   const handleSliderChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const newPage = Number(event.target.value);
+    const newPage = sections.length - 1 - Number(event.target.value);
 
     setPage(newPage);
 
@@ -69,15 +69,16 @@ export default function PageSlider() {
 
   return (
     <div
-      className="
-        fixed
-        left-3
-        top-1/2
-        z-50
-        -translate-y-1/2
-        md:left-6
-      "
-    >
+     className="
+     fixed
+     left-3
+     top-0
+     bottom-0
+     z-50
+     md:left-6
+  "
+>
+    
       <div className="page-slider-wrapper">
         {/* Vertical Page Slider */}
         <input
@@ -86,7 +87,7 @@ export default function PageSlider() {
           min="0"
           max={sections.length - 1}
           step="1"
-          value={page}
+          value={sections.length - 1 - page}
           onChange={handleSliderChange}
           className="page-slider"
           aria-label="Navigate between portfolio pages"
