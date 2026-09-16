@@ -341,3 +341,10 @@ body {
     transition: none;
   }
 }
+.navbar-texture {
+  background-color: #6B3515;
+  background-image: url("/Brown-Texture.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

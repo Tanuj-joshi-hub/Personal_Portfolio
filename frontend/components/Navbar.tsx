@@ -27,10 +27,7 @@ export default function Navbar() {
 
         md:flex-col
 
-        bg-[#6B3515]
-        bg-[url('/Brown-Texture.avif')]
-        bg-cover
-        bg-center
+        navbar-texture
         text-white
       "
     >
