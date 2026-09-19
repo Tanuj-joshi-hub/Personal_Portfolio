@@ -49,12 +49,20 @@ export default function Home() {
         "
       >
 
+        {/* Waterfall background: spans About + Skills only */}
+        <div
+          className="waterfall-bg"
+          aria-hidden="true"
+        />
+
         {/* =========================
             ABOUT PAGE
         ========================== */}
         <section
           id="about"
           className="
+            relative
+            z-10
             flex
             min-h-screen
             snap-start
@@ -72,7 +80,6 @@ export default function Home() {
               Portfolio
             </p>
 
-            {/* TEXTURED HEADING */}
             <h1
               className="
                 heading-texture
@@ -151,6 +158,8 @@ export default function Home() {
         <section
           id="skills"
           className="
+            relative
+            z-10
             flex
             min-h-screen
             snap-start
@@ -168,7 +177,6 @@ export default function Home() {
               What I Use
             </p>
 
-            {/* TEXTURED HEADING */}
             <h2
               className="
                 heading-texture
@@ -338,6 +346,8 @@ export default function Home() {
         <section
           id="projects"
           className="
+            relative
+            z-10
             flex
             min-h-screen
             snap-start
@@ -355,7 +365,6 @@ export default function Home() {
               Selected Work
             </p>
 
-            {/* TEXTURED HEADING */}
             <h2
               className="
                 heading-texture
@@ -487,6 +496,8 @@ export default function Home() {
         <section
           id="contact"
           className="
+            relative
+            z-10
             flex
             min-h-screen
             snap-start
@@ -504,7 +515,6 @@ export default function Home() {
               Get In Touch
             </p>
 
-            {/* TEXTURED HEADING */}
             <h2
               className="
                 heading-texture
@@ -529,7 +539,7 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap gap-4">
 
               <a
-                href="mailto:piyush.rrr23@gmail.com"
+                href="mailto:your-email@example.com"
                 className="
                   rounded-full
                   bg-white
