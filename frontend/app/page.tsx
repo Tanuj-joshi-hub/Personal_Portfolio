@@ -5,6 +5,7 @@ import ProfileImage from "@/components/ProfileImage";
 export default function Home() {
   return (
     <main className="relative h-screen overflow-hidden bg-[#023020] text-white">
+
       {/* =========================
           ANIMATED BACKGROUND
       ========================== */}
@@ -24,10 +25,11 @@ export default function Home() {
       ========================== */}
       <PageSlider />
 
-      {/*===========================
-          ProfileImage
-      ===========================*/}
+      {/* =========================
+          PROFILE IMAGE
+      ========================== */}
       <ProfileImage />
+
       {/* =========================
           PAGE CONTAINER
       ========================== */}
@@ -46,6 +48,7 @@ export default function Home() {
           md:pr-44
         "
       >
+
         {/* =========================
             ABOUT PAGE
         ========================== */}
@@ -64,36 +67,44 @@ export default function Home() {
           "
         >
           <div className="mx-auto w-full max-w-5xl">
+
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/60">
               Portfolio
             </p>
 
+            {/* TEXTURED HEADING */}
             <h1
               className="
-                text-4xl
-                font-bold
+                heading-texture
+                text-6xl
                 leading-tight
-                tracking-tight
-                sm:text-7xl
+                sm:text-8xl
               "
             >
               About Me
             </h1>
 
             <div className="mt-8 max-w-2xl">
+
               <p className="text-base leading-7 text-white/75 sm:text-lg">
-                Hi, I&apos;m Tanuj. I&apos;m a developer interested in building
-                modern web applications, experimenting with technology, and
-                solving real-world problems through software.
+                Hi, I&apos;m{" "}
+                <span className="font-calligraphy text-3xl sm:text-4xl">
+                  Tanuj
+                </span>
+                . I&apos;m a developer interested in building modern web
+                applications, experimenting with technology, and solving
+                real-world problems through software.
               </p>
 
               <p className="mt-5 text-base leading-7 text-white/60 sm:text-lg">
                 This portfolio is currently a work in progress. More projects,
                 technical details, and information will be added soon.
               </p>
+
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
+
               <a
                 href="#projects"
                 className="
@@ -127,9 +138,12 @@ export default function Home() {
               >
                 Contact Me
               </a>
+
             </div>
+
           </div>
         </section>
+
 
         {/* =========================
             SKILLS PAGE
@@ -149,23 +163,25 @@ export default function Home() {
           "
         >
           <div className="mx-auto w-full max-w-5xl">
+
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/60">
               What I Use
             </p>
 
+            {/* TEXTURED HEADING */}
             <h2
               className="
-                text-4xl
-                font-bold
+                heading-texture
+                text-6xl
                 leading-tight
-                tracking-tight
-                sm:text-7xl
+                sm:text-8xl
               "
             >
               Skills
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
               {/* Skill 1 */}
               <div
                 className="
@@ -180,12 +196,15 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Frontend</h3>
+                <h3 className="text-xl font-semibold">
+                  Frontend
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   Next.js, React, TypeScript, HTML, CSS and Tailwind CSS.
                 </p>
               </div>
+
 
               {/* Skill 2 */}
               <div
@@ -201,13 +220,16 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Backend</h3>
+                <h3 className="text-xl font-semibold">
+                  Backend
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   Python, FastAPI, REST APIs and backend application
                   development.
                 </p>
               </div>
+
 
               {/* Skill 3 */}
               <div
@@ -223,12 +245,15 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Database</h3>
+                <h3 className="text-xl font-semibold">
+                  Database
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   PostgreSQL, relational database design and data modelling.
                 </p>
               </div>
+
 
               {/* Skill 4 */}
               <div
@@ -244,12 +269,15 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Tools</h3>
+                <h3 className="text-xl font-semibold">
+                  Tools
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   Git, GitHub, VS Code and modern development workflows.
                 </p>
               </div>
+
 
               {/* Skill 5 */}
               <div
@@ -265,13 +293,16 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Problem Solving</h3>
+                <h3 className="text-xl font-semibold">
+                  Problem Solving
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   Building practical solutions and learning new technologies
                   through projects.
                 </p>
               </div>
+
 
               {/* Skill 6 */}
               <div
@@ -287,15 +318,19 @@ export default function Home() {
                   hover:bg-white/10
                 "
               >
-                <h3 className="text-xl font-semibold">Learning</h3>
+                <h3 className="text-xl font-semibold">
+                  Learning
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
                   Constantly exploring new technologies, frameworks and ideas.
                 </p>
               </div>
+
             </div>
           </div>
         </section>
+
 
         {/* =========================
             PROJECTS PAGE
@@ -315,23 +350,25 @@ export default function Home() {
           "
         >
           <div className="mx-auto w-full max-w-5xl">
+
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/60">
               Selected Work
             </p>
 
+            {/* TEXTURED HEADING */}
             <h2
               className="
-                text-4xl
-                font-bold
+                heading-texture
+                text-6xl
                 leading-tight
-                tracking-tight
-                sm:text-7xl
+                sm:text-8xl
               "
             >
               Projects
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+
               {/* Project 1 */}
               <article
                 className="
@@ -347,7 +384,9 @@ export default function Home() {
                 "
               >
                 <div className="flex items-start justify-between gap-4">
+
                   <div>
+
                     <p className="text-xs uppercase tracking-[0.2em] text-white/40">
                       Project 01
                     </p>
@@ -355,11 +394,13 @@ export default function Home() {
                     <h3 className="mt-2 text-2xl font-semibold">
                       IQLRS
                     </h3>
+
                   </div>
 
                   <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
                     Hackathon
                   </span>
+
                 </div>
 
                 <p className="mt-5 text-sm leading-6 text-white/60">
@@ -369,6 +410,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
+
                   <span className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/60">
                     Next.js
                   </span>
@@ -380,8 +422,10 @@ export default function Home() {
                   <span className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/60">
                     PostgreSQL
                   </span>
+
                 </div>
               </article>
+
 
               {/* Project 2 */}
               <article
@@ -398,7 +442,9 @@ export default function Home() {
                 "
               >
                 <div className="flex items-start justify-between gap-4">
+
                   <div>
+
                     <p className="text-xs uppercase tracking-[0.2em] text-white/40">
                       Project 02
                     </p>
@@ -406,11 +452,13 @@ export default function Home() {
                     <h3 className="mt-2 text-2xl font-semibold">
                       Coming Soon
                     </h3>
+
                   </div>
 
                   <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
                     2026
                   </span>
+
                 </div>
 
                 <p className="mt-5 text-sm leading-6 text-white/60">
@@ -420,14 +468,18 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6">
+
                   <span className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/60">
                     In Development
                   </span>
+
                 </div>
               </article>
+
             </div>
           </div>
         </section>
+
 
         {/* =========================
             CONTACT PAGE
@@ -447,31 +499,35 @@ export default function Home() {
           "
         >
           <div className="mx-auto w-full max-w-5xl">
+
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/60">
               Get In Touch
             </p>
 
+            {/* TEXTURED HEADING */}
             <h2
               className="
-                text-4xl
-                font-bold
+                heading-texture
+                text-6xl
                 leading-tight
-                tracking-tight
-                sm:text-7xl
+                sm:text-8xl
               "
             >
               Contact
             </h2>
 
             <div className="mt-8 max-w-2xl">
+
               <p className="text-base leading-7 text-white/70 sm:text-lg">
                 Have an idea, project, or opportunity? Feel free to get in
                 touch. This section will later contain my actual contact
                 information and social links.
               </p>
+
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
+
               <a
                 href="mailto:your-email@example.com"
                 className="
@@ -504,9 +560,12 @@ export default function Home() {
               >
                 Back to About
               </a>
+
             </div>
+
           </div>
         </section>
+
       </div>
     </main>
   );

@@ -93,13 +93,7 @@ export default function PageSlider() {
           aria-label="Navigate between portfolio pages"
         />
 
-        {/* Page Numbers */}
-        <div className="page-slider-labels">
-          <span className={page === 0 ? "active" : ""}>01</span>
-          <span className={page === 1 ? "active" : ""}>02</span>
-          <span className={page === 2 ? "active" : ""}>03</span>
-          <span className={page === 3 ? "active" : ""}>04</span>
-        </div>
+        
       </div>
     </div>
   );
