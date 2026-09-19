@@ -539,7 +539,7 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap gap-4">
 
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:piyush.rrr23@gmail.com"
                 className="
                   rounded-full
                   bg-white
