@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import PageSlider from "@/components/PageSlider";
+import ProfileImage from "@/components/ProfileImage";
 
 export default function Home() {
   return (
@@ -23,6 +24,10 @@ export default function Home() {
       ========================== */}
       <PageSlider />
 
+      {/*===========================
+          ProfileImage
+      ===========================*/}
+      <ProfileImage />
       {/* =========================
           PAGE CONTAINER
       ========================== */}
