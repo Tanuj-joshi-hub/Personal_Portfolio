@@ -473,30 +473,49 @@ body {
 }
 
 /* ========================================
-   WATERFALL BACKGROUND
+   WATERFALL VIDEO BACKGROUND
 ======================================== */
+
+/*
+  Desktop:
+  Waterfall occupies the left 354px
+  and exactly one screen/page height.
+*/
 
 .waterfall-bg {
   position: absolute;
+
   top: 0;
   left: 0;
-  width: 354px;
+
+  width: 100%;
   height: 100vh;
+
   z-index: 0;
   pointer-events: none;
 
-  background-image: url("/Waterfall.gif");
-  background-size: 100% 100%;
-  background-position: center top;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center top;
 
   opacity: 0.95;
 }
 
-.waterfall-bg::after {
-  content: "";
+/*
+  Overlay used to keep the original
+  green tint and text readability.
+*/
+.waterfall-overlay {
   position: absolute;
-  inset: 0;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 1;
+  pointer-events: none;
+
   background: linear-gradient(
     to right,
     rgba(2, 48, 32, 0.05),
@@ -506,7 +525,7 @@ body {
 
 /* ========================================
    ARIZONIA CALLIGRAPHY FONT
-   ======================================== */
+======================================== */
 
 .font-calligraphy {
   font-family: var(--font-arizonia), cursive;
@@ -515,7 +534,7 @@ body {
 
 /* ========================================
    TEXTURED SECTION HEADINGS
-   ======================================== */
+======================================== */
 
 .heading-texture {
   font-family: var(--font-arizonia), cursive;
@@ -534,17 +553,25 @@ body {
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
 }
 
+/* ========================================
+   WATERFALL VIDEO - MOBILE
+======================================== */
 
 @media (max-width: 767px) {
   .waterfall-bg {
     width: 100%;
     height: 100vh;
-    background-size: cover;
-    background-position: center top;
+
+    object-fit: cover;
+    object-position: center top;
+
     opacity: 0.88;
   }
 
-  .waterfall-bg::after {
+  .waterfall-overlay {
+    width: 100%;
+    height: 100vh;
+
     background: rgba(2, 48, 32, 0.20);
   }
 }

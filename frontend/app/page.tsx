@@ -49,12 +49,22 @@ export default function Home() {
         "
       >
 
-        {/* Waterfall background: spans About + Skills only */}
-        <div
-          className="waterfall-bg"
-          aria-hidden="true"
-        />
-
+        {/* Waterfall video background - About page only */}
+<video
+  className="waterfall-bg"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  aria-hidden="true"
+>
+  <source src="/Waterfall.mp4" type="video/mp4" />
+</video>
+<div
+  className="waterfall-overlay"
+  aria-hidden="true"
+/>
         {/* =========================
             ABOUT PAGE
         ========================== */}
