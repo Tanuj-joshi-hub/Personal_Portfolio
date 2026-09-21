@@ -7,7 +7,7 @@ export default function ProfileImage() {
     <div className="profile-image">
       <div className="profile-image-ring">
         <Image
-          src="/profile.jpeg"
+          src="/profile.webp"
           alt="Tanuj Joshi"
           fill
           priority

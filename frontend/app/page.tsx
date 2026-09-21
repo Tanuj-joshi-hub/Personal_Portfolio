@@ -12,6 +12,7 @@ export default function HomePage() {
         loop
         playsInline
         preload="auto"
+        poster="/Tree-poster.jpg"
       >
         <source src="/Tree.mp4" type="video/mp4" />
       </video>

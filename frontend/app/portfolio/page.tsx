@@ -57,7 +57,7 @@ export default function Home() {
   loop
   playsInline
   preload="auto"
-  aria-hidden="true"
+  poster="/Waterfall-poster.jpg"
 >
   <source src="/Waterfall.mp4" type="video/mp4" />
 </video>
