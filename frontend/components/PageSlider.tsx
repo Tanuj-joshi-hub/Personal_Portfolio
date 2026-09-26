@@ -80,20 +80,31 @@ export default function PageSlider() {
 >
     
       <div className="page-slider-wrapper">
-        {/* Vertical Page Slider */}
-        <input
-          ref={sliderRef}
-          type="range"
-          min="0"
-          max={sections.length - 1}
-          step="1"
-          value={sections.length - 1 - page}
-          onChange={handleSliderChange}
-          className="page-slider"
-          aria-label="Navigate between portfolio pages"
-        />
 
-        
+  {/* Custom leaf indicator */}
+  <img
+    src="/Leaf_icon.png"
+    alt=""
+    draggable="false"
+    className="page-slider-leaf"
+    style={{
+      top: `${(page / (sections.length - 1)) * 210}px`,
+    }}
+  />
+
+  {/* Invisible native slider used for dragging */}
+  <input
+    ref={sliderRef}
+    type="range"
+    min="0"
+    max={sections.length - 1}
+    step="1"
+    value={sections.length - 1 - page}
+    onChange={handleSliderChange}
+    className="page-slider"
+    aria-label="Navigate between portfolio pages"
+     />
+
       </div>
     </div>
   );

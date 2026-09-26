@@ -99,6 +99,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Entrance animation */
+  animation: pageSliderReveal 1.2s ease-out forwards;
+}
+.page-slider-leaf {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 10;
+
+  filter: drop-shadow(
+    0 2px 5px rgba(0, 0, 0, 0.35)
+  );
+
+  transition:
+    top 0.25s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+@keyframes pageSliderReveal {
+  from {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Slider itself */
@@ -113,7 +152,7 @@ body {
   appearance: none;
   -webkit-appearance: none;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(2, 48, 32, 0.45);
 
   border-radius: 9999px;
 
@@ -127,7 +166,7 @@ body {
 .page-slider::-webkit-slider-runnable-track {
   height: 4px;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(2, 48, 32, 0.45);
 
   border-radius: 9999px;
 }
@@ -136,36 +175,39 @@ body {
   appearance: none;
   -webkit-appearance: none;
 
-  width: 14px;
-  height: 14px;
+  width: 1px;
+  height: 1px;
 
-  margin-top: -5px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
 
-  border-radius: 50%;
+  opacity: 0;
+}
 
-  background: white;
+.page-slider::-moz-range-thumb {
+  width: 1px;
+  height: 1px;
 
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: none;
+  background: transparent;
+  box-shadow: none;
 
-  cursor: grab;
-
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  opacity: 0;
 }
 
 .page-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+  filter:
+    drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4))
+    brightness(1.08);
 }
 
 .page-slider::-webkit-slider-thumb:active {
   cursor: grabbing;
 
-  transform: scale(1.35);
+  transform: scale(1.25);
 }
 
 /* ========================================
@@ -175,30 +217,35 @@ body {
 .page-slider::-moz-range-track {
   height: 4px;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(2, 48, 32, 0.45);
 
   border-radius: 9999px;
 }
 
 .page-slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
+  width: 30px;
+  height: 30px;
 
+  border: none;
   border-radius: 50%;
 
-  background: white;
-
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  background-image: url("/Leaf_icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 
   cursor: grab;
 
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
 }
 
 .page-slider::-moz-range-thumb:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+  filter:
+    drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4))
+    brightness(1.08);
 }
 
 /* ========================================
