@@ -69,41 +69,43 @@ export default function PageSlider() {
 
   return (
     <div
-     className="
-     fixed
-     left-3
-     top-0
-     bottom-0
-     z-50
-     md:left-6
-  "
->
-    
+      className="
+        fixed
+        left-3
+        top-0
+        bottom-0
+        z-50
+        md:left-6
+      "
+    >
       <div className="page-slider-wrapper">
 
-  {/* Custom leaf indicator */}
-  <img
-    src="/Leaf_icon.png"
-    alt=""
-    draggable="false"
-    className="page-slider-leaf"
-    style={{
-      top: `${(page / (sections.length - 1)) * 210}px`,
-    }}
-  />
+        {/* Custom leaf indicator */}
+        <img
+          src="/Leaf_icon.png"
+          alt=""
+          draggable="false"
+          className="page-slider-leaf"
+          style={{
+            top: `calc(
+              (var(--slider-length) - var(--leaf-size))
+              * ${page / (sections.length - 1)}
+            )`,
+          }}
+        />
 
-  {/* Invisible native slider used for dragging */}
-  <input
-    ref={sliderRef}
-    type="range"
-    min="0"
-    max={sections.length - 1}
-    step="1"
-    value={sections.length - 1 - page}
-    onChange={handleSliderChange}
-    className="page-slider"
-    aria-label="Navigate between portfolio pages"
-     />
+        {/* Invisible native slider used for dragging */}
+        <input
+          ref={sliderRef}
+          type="range"
+          min="0"
+          max={sections.length - 1}
+          step="1"
+          value={sections.length - 1 - page}
+          onChange={handleSliderChange}
+          className="page-slider"
+          aria-label="Navigate between portfolio pages"
+        />
 
       </div>
     </div>

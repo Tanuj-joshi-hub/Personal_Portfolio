@@ -96,6 +96,10 @@ body {
   width: 40px;
   height: 240px;
 
+  /* Slider geometry */
+  --slider-length: 240px;
+  --leaf-size: 34px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,14 +107,15 @@ body {
   /* Entrance animation */
   animation: pageSliderReveal 1.2s ease-out forwards;
 }
+
 .page-slider-leaf {
   position: absolute;
 
   left: 50%;
   transform: translateX(-50%);
 
-  width: 34px;
-  height: 34px;
+  width: var(--leaf-size);
+  height: var(--leaf-size);
 
   object-fit: contain;
 
@@ -128,6 +133,7 @@ body {
     transform 0.2s ease,
     filter 0.2s ease;
 }
+
 @keyframes pageSliderReveal {
   from {
     transform: translateX(-120%);
@@ -144,7 +150,7 @@ body {
 .page-slider {
   position: absolute;
 
-  width: 240px;
+  width: var(--slider-length);
   height: 4px;
 
   transform: rotate(-90deg);
@@ -271,6 +277,7 @@ body {
   pointer-events: none;
 }
 
+/* Active page number */
 .page-slider-labels span {
   transition:
     color 0.2s ease,
@@ -296,16 +303,24 @@ body {
   -------------------------------- */
 
   .page-slider-wrapper {
-    width: 30px;
-    height: 180px;
+    width: 40px;
+    height: 240px;
+
+    --slider-length: 240px;
+    --leaf-size: 34px;
   }
 
   .page-slider {
-    width: 180px;
+    width: var(--slider-length);
+  }
+
+  .page-slider-leaf {
+    width: var(--leaf-size);
+    height: var(--leaf-size);
   }
 
   .page-slider-labels {
-    height: 180px;
+    height: 240px;
 
     left: -14px;
 
@@ -354,10 +369,18 @@ body {
 @media (max-width: 400px) {
   .page-slider-wrapper {
     height: 150px;
+
+    --slider-length: 150px;
+    --leaf-size: 34px;
   }
 
   .page-slider {
-    width: 150px;
+    width: var(--slider-length);
+  }
+
+  .page-slider-leaf {
+    width: var(--leaf-size);
+    height: var(--leaf-size);
   }
 
   .page-slider-labels {
@@ -400,6 +423,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 /* ========================================
    NAVBAR ENTRANCE ANIMATION
 ======================================== */
@@ -419,6 +443,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes navbarRevealMobile {
   from {
     transform: translateY(100%);
@@ -583,6 +608,7 @@ body {
   Overlay used to keep the original
   green tint and text readability.
 */
+
 .waterfall-overlay {
   position: absolute;
 
