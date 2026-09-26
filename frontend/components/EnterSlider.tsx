@@ -3,7 +3,11 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EnterSlider() {
+interface EnterSliderProps {
+  onProgress?: (progress: number) => void;
+}
+
+export default function EnterSlider({ onProgress }: EnterSliderProps) {
   const router = useRouter();
 
   const trackRef = useRef<HTMLDivElement>(null);
@@ -33,14 +37,19 @@ export default function EnterSlider() {
 
     setPosition(newPosition);
 
+    const progress =
+      maxPosition > 0 ? newPosition / maxPosition : 0;
+
+    onProgress?.(progress);
+
     // Slider completed
-    if (newPosition >= maxPosition * 0.9) {
+    if (progress >= 0.9) {
       completedRef.current = true;
       setPosition(maxPosition);
-
+      onProgress?.(1);
       setTimeout(() => {
         router.push("/portfolio");
-      }, 200);
+      }, 300);
     }
   };
 
@@ -65,6 +74,7 @@ export default function EnterSlider() {
     // If slider wasn't completed, return it to the right
     if (!completedRef.current) {
       setPosition(0);
+      onProgress?.(0)
     }
   };
 
