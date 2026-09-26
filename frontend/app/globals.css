@@ -353,6 +353,36 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+/* ========================================
+   NAVBAR ENTRANCE ANIMATION
+======================================== */
+
+.navbar-texture {
+  animation: navbarRevealDesktop 1.2s ease-out forwards;
+}
+
+@keyframes navbarRevealDesktop {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes navbarRevealMobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* Mobile bottom navigation */
 @media (max-width: 767px) {
@@ -362,6 +392,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    animation: navbarRevealMobile 1.2s ease-out forwards;
   }
 }
 
