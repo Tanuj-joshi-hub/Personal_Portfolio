@@ -43,8 +43,6 @@ export default function Home() {
           overflow-y-auto
           overflow-x-hidden
           scroll-smooth
-          snap-y
-          snap-mandatory
           md:pr-44
         "
       >
@@ -75,7 +73,6 @@ export default function Home() {
             z-10
             flex
             min-h-screen
-            snap-start
             items-center
             px-8
             py-20
@@ -172,7 +169,6 @@ export default function Home() {
             z-10
             flex
             min-h-screen
-            snap-start
             items-center
             px-8
             py-20
@@ -360,7 +356,6 @@ export default function Home() {
             z-10
             flex
             min-h-screen
-            snap-start
             items-center
             px-8
             py-20
@@ -510,7 +505,6 @@ export default function Home() {
             z-10
             flex
             min-h-screen
-            snap-start
             items-center
             px-8
             py-20

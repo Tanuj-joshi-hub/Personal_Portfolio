@@ -80,10 +80,18 @@ body {
 
 .page-container {
   scrollbar-width: none;
+
+  /* Free scrolling: do not force the viewport to snap to sections. */
+  scroll-snap-type: none;
 }
 
 .page-container::-webkit-scrollbar {
   display: none;
+}
+
+/* Sections remain freely scrollable; no automatic page snapping. */
+.page-container > section {
+  scroll-snap-align: none;
 }
 
 /* ========================================
