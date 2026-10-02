@@ -846,3 +846,34 @@ body {
     background: rgba(2, 48, 32, 0.20);
   }
 }
+
+/* ========================================
+   ABOUT PAGE - TITLE BOXES
+======================================== */
+
+.about-title-box {
+  display: block;
+  width: fit-content;
+  padding: 10px 24px;
+
+  background: hwb(155 0% 72%);
+  color: #000;
+
+  border: 3px solid #000;
+
+  /* 3D black outline */
+  box-shadow:
+    6px 6px 0 #000,
+    10px 10px 0 rgba(0, 0, 0, 0.35);
+
+  font-weight: 700;
+}
+/* ========================================
+   ABOUT ME - RESPONSIVE SIZE
+======================================== */
+
+.about-me-title {
+  white-space: nowrap;
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  line-height: 1;
+}

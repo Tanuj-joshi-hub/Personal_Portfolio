@@ -83,20 +83,15 @@ export default function Home() {
         >
           <div className="mx-auto w-full max-w-5xl">
 
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/60">
-              Portfolio
-            </p>
+              <div className="about-title-box mb-4">
+                   Portfolio
+              </div>
 
-            <h1
-              className="
-                heading-texture
-                text-6xl
-                leading-tight
-                sm:text-8xl
-              "
-            >
-              About Me
-            </h1>
+              <div className="about-title-box about-me-title">
+                  <span className="heading-texture">
+                          About Me
+                     </span>
+              </div>
 
             <div className="mt-8 max-w-2xl">
 

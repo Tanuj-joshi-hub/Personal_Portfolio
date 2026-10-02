@@ -6,7 +6,7 @@ import { useState } from "react";
 const messages = ["Hello", "I am Tanuj", "..."];
 
 export default function ProfileImage() {
-  const [messageIndex, setMessageIndex] = useState(-1);
+  const [messageIndex, setMessageIndex] = useState(2);
 
   const handleProfileClick = () => {
     setMessageIndex((current) => {
