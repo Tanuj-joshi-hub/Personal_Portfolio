@@ -37,7 +37,7 @@ export default function ProfileImage() {
       >
         <div className="profile-image-ring">
           <Image
-            src="/profile.webp"
+            src="/profile-new.webp"
             alt="Tanuj Joshi"
             fill
             priority
