@@ -96,13 +96,17 @@ export default function Home() {
             <div className="mt-8 max-w-2xl">
 
               <p className="text-base leading-7 text-white/75 sm:text-lg">
-                Hi, I&apos;m{" "}
+                Hello👋🏻, I&apos;m{" "}
                 <span className="font-calligraphy text-3xl sm:text-4xl">
                   Tanuj
                 </span>
-                . I&apos;m a developer interested in building modern web
-                applications, experimenting with technology, and solving
-                real-world problems through software.
+                . I&apos;m a Software developer from INDIA,
+                  <br></br>
+                  I&apos;m currently researching on symbolic regression,
+                  <br></br>
+                  I have worked on 2 software projects,
+                  <br></br>
+                  I&apos;m working on 2 upcoming personal projects. 
               </p>
 
               <p className="mt-5 text-base leading-7 text-white/60 sm:text-lg">
